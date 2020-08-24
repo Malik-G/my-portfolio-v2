@@ -1,38 +1,277 @@
+
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  overflow-x: hidden;
+	/* background-color: rgb(67, 70, 67); */
+}
+/* a, a:visited, a:hover, a:active {
+   color: inherit;
+   font-family: 'Alegreya Sans SC';
+   text-decoration: none;
+} */
+h1 {
+   color: black;
+   font-family: 'Alegreya Sans SC', sans-serif;
+   font-size: 3em;
+   margin-top: 0;
+}
+
+
+
+.thebox{
+max-width:1000px;
+max-height:700px;
+}
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: black;
+}
+/* .App-intro {
+  font-size: large;
+} */
+/* .App-title {
+  font-size: 1.5em;
+} */
+
+
+.bio-text{
+	justify-content: center;
+	width: 40%;
+	height: auto;
+	overflow: visible;
+}
+/* .colorOrange{
+   color: orange;
+}
+.colorSeaGreen {
+   color: rgb(59, 168, 106)
+}
+.colorLightBlue {
+   color: lightblue  
+}
+.colorTomato {
+   color: tomato
+} */
+.container{
+	/* height: 100%; */
+}
+.float-left{
+	float:left;
+	border: 1px solid red;
+}
+.github-div{
+	width: 25%;
+	height:50%;
+}
+.github-logo{
+	/* margin-left:5%; */
+	height: 100px;
+	width: 100px;
+	position:absolute;
+	margin-left:8%;
+}
+.header {
+   font-size: 80px;
+   color: grey;
+}
+.header-content{
+	min-width:100%;
+	/* height:100vw; */
+	display: grid;
+	grid-template-columns: 3;
+	border: 1px solid red;
+	position: relative;
+	top:0px;
+	left:0px;
+	position: absolute;
+	/* background-attachment: unset; */
+}
+.infoContainer {
+   max-width: 400px;
+   color:cadetblue;
+   margin: auto;
+   padding: 5px;
+   background: rgb(15,20,20);
+   text-decoration: none;
+   /* float:left */
+}
+.infoContainer-outer{
+	/* margin-top:10%; */
+	/* top:30%; */
+	position:relative;
+}
+.left{
+	top:10px;
+	left: 100px;
+}
+.myPic {
+  border-radius: 50%;
+  /* height: 200px;
+  width: 200px; */
+  height: 7em;
+  width: 8em;
+  margin: 0;
+  /* justify-self: center; */
+	/* position: fixed; */
+	/* z-index:-1; */
+	/* background-attachment: fixed; */
+}
+.panelDetails {
+   background-color: rgb(67, 70, 67);
+   font-family: 'Abel', sans-serif;
+}
+.parallax-stpaul-main{
+	/* background-image: url("../images/stpaul_night.jpg"); */
+	background-image: url("../internal-images/stpaul_night.png");
+	height: 100vh;
+	width: 100vw; 
+	/* background-attachment: fixed; */
+  background-position: center;
+	/* background-position: -50px center; */
+  /* background-position-x: 1px; */
+	background-repeat: no-repeat;
+  background-size: cover;
+	/* background-size: 90vw 90vh; */
+	z-index:-1;
+	position: fixed;
+	top:0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: max-content; */
+	/* left:0px; */
+	/* display: inline-block; */
+}
+.parallax-stpaul-trans{
+	background-image: url("../internal-images/stpaul_night8.png");
+	height: 100vh;
+	width: 100vw;
+	/* background-attachment: fixed; */
+  background-position: center;
+	/* background-position: center; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* top:0px;*/
+	/* left:0px; */
+	/* background-attachment: scroll; */
+	/* position: fixed; */
+	/* display: inline-block; */
+}
+.parallax-reciperiot{
+	background: url("../internal-images/recipe-riot-home.png");
+	height: 100vh;
+	width: 100vw; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.parallax-rgb{
+	background-image: url("../internal-images/rgb_game.png");
+	height: 100vh;
+	width: 100vw;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.parallax-todo{
+	background-image: url("../internal-images/todo_site.png");
+	height: 100vh;
+	width: 100vw; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.parallax-book{
+	background-image: url("../internal-images/bookcollection.png");
+	height: 100vh;
+	width: 100vw; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.projectName{
+   margin: auto auto;
+   font-size: 40px;
+   color:black
+}
+.project-section {
+	display: inline-block;
+	width: 100%;
+}
+.title{
+	position:absolute;
+	background-attachment: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 80em) {
+  h1 {
+    font-size: 5em;
   }
-  to {
-    transform: rotate(360deg);
+  .myPic{
+    height: 30em;
+    width: 35em;
+    opacity: 0.7;
+    margin: -100px;
   }
 }
+@media screen and (max-width: 60em) {
+  h1 {
+    font-size: 4em;
+  }
+  .myPic{
+    height: 10em;
+    width: 11em;
+  }
+}
+@media screen and (max-width: 40em) {
+  h1 {
+    font-size: 3em;
+  }
+  .my-pic{
+    height: 9em;
+    width: 10em;
+  }
+}
+/* @media screen and (min-width: 570px) {
+  h1 {
+    font-size: 3em;
+  }
+  .my-pic{
+    height: 9em;
+    width: 10em;
+  }
+}
+@media screen and (min-width: 760px) {
+  h1 {
+    font-size: 4em;
+  }
+  .myPic{
+    height: 10em;
+    width: 11em;
+  }
+}
+@media screen and (min-width: 950px) {
+  h1 {
+    font-size: 5em;
+  }
+  .myPic{
+    height: 30em;
+    width: 35em;
+    opacity: 0.7;
+    margin: -100px;
+  }
+} */
+/* font-family: 'Nothing You Could Do', cursive;
+font-family: 'Syncopate', sans-serif; */
