@@ -11,7 +11,8 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "typeface-abel": "0.0.72"
+    "typeface-abel": "0.0.72",
+    "typeface-alegreya-sans-sc": "0.0.75"
   },
   "scripts": {
     "start": "react-scripts start",

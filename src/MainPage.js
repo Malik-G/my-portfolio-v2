@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-import './ProjectPage.css';
+import './MainPage.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-class ProjectPage extends Component {
+class MainPage extends Component {
 
   state = {
     expanded: null,
     flipped: false,
     bioContainer: null,
     portfolioContainer: null,
-  };
-
-  handleChange = panel => (event, expanded) => {
-    this.setState({
-      expanded: panel
-    });
+    socialContainer: null
   };
 
   componentDidMount() {
@@ -43,10 +35,10 @@ class ProjectPage extends Component {
     // })
 
     ScrollTrigger.batch(".project-container", {
-      //interval: 0.1, // time window (in seconds) for batching to occur. 
-      onEnter: batch => gsap.to(batch, { opacity: 1, x: 0, overwrite: true }),
+      // interval: 0.3, // time window (in seconds) for batching to occur. 
+      onEnter: batch => gsap.fromTo(batch, { opacity: 0, x: 100 } ,{ opacity: 1, x: 0}),
       onLeave: batch => gsap.set(batch, { opacity: 0, x: -100, overwrite: true }),
-      onEnterBack: batch => gsap.to(batch, { opacity: 1, x: 0, stagger: 0.15, overwrite: true }),
+      onEnterBack: batch => gsap.to(batch, { opacity: 1, x: 0, overwrite: true }),
       onLeaveBack: batch => gsap.set(batch, { opacity: 0, x: 100, overwrite: true })
     });
 
@@ -57,7 +49,6 @@ class ProjectPage extends Component {
         start: "top top",
         end: "bottom top",
         scrub: true,
-        markers: true
       },
     })
 
@@ -68,35 +59,28 @@ class ProjectPage extends Component {
         start: "top top",
         end: "bottom top",
         scrub: true,
-        markers: true,
       },
     })
 
-    // gsap.from(".project-container", {
-    //   xPercent: 105, autoalpha: 0, ease: "circ.out", 
+    gsap.from(["#social-header", "#social-links"], {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#social-container", //this.state.bioContainer,
+        start: "top +=20%",
+        end: "top top",
+        scrub: true,
+      },
+    })
+
+    // gsap.from("#social-links", {
+    //   opacity: 0,
     //   scrollTrigger: {
-    //     // animation: portfolioTimeline,
-    //     trigger: ".project-container", //this.state.bioContainer,
-    //     start: "top bottom",
-    //     end: "bottom center",
+    //     trigger: "#social-container", //this.state.bioContainer,
+    //     start: "top +=20%",
+    //     end: "top top",
     //     scrub: true,
-    //     markers: true,
-    //   }
+    //   },
     // })
-
-    //this.props.dispatch({type: 'GET_PROJECT_TAGS', payload: 1})
-    //this.getPortfolio();
-  }
-
-  // getPortfolio = () => {
-  //    this.props.dispatch({type: 'GET_PORTFOLIO'})
-  // }
-
-  getProjectTags = (id) => {
-    return (event) => {
-      this.props.dispatch({ type: 'GET_PROJECT_TAGS', payload: id })
-
-    }
   }
 
   flip = (event) => {
@@ -111,19 +95,12 @@ class ProjectPage extends Component {
     console.log(event.target)
   }
 
-  toAdminPage = () => {
-    this.props.history.push('/admin');
-  }
-
   render() {
-
-    const { classes } = this.props
-
     return (
-      <section id="">
+      <section>
 
         <div className="parallax-stpaul-main">
-          <img className="myPic" src="images/malikg.png" alt="Picture of Malik Glass" />
+          <img id="my-pic" src="images/malikg.png" alt="Picture of Malik Glass" />
           <h1 id="name-header">Malik Glass</h1>
         </div>
 
@@ -138,7 +115,7 @@ class ProjectPage extends Component {
                 <p>Welcome! My name is Malik.</p>
                 <p>I am a software developer from Saint Paul, Minnesota.</p>
                 <p>I won't force you to read my bio.</p>
-                <p> Click this message if you care to know more.</p>
+                <p> <span id="animated-word">Click this</span> message if you care to know more.</p>
               </div>
               <div id="flip-note-back">
                 <p className="note-back-header">Education</p>
@@ -232,7 +209,7 @@ class ProjectPage extends Component {
                 <a href="https://github.com/Malik-G/recipe-site/" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
               </div>
               <div className="link">
-                <a href="https://powerful-sea-84064.herokuapp.com/" title="CardSwap Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
+                <a href="https://powerful-sea-84064.herokuapp.com/" title="Recipe Riot Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
               </div>
             </div>
             <div id="reciperiot-techs" className="project-techs">
@@ -255,7 +232,7 @@ class ProjectPage extends Component {
                 <a href="https://github.com/Malik-G/to-do-list" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
               </div>
               <div className="link">
-                <a href="https://obscure-ridge-59300.herokuapp.com/" title="CardSwap Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
+                <a href="https://obscure-ridge-59300.herokuapp.com/" title="To-Do App Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
               </div>
             </div>
             <div id="todo-techs" className="project-techs">
@@ -263,7 +240,7 @@ class ProjectPage extends Component {
             </div>
           </div>
           <hr />
-          <div id="bookkeeper" className="project-container">t
+          <div id="bookkeeper" className="project-container">
             <img id="bookkeeper-img" className="project-img" src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/book_list.png?alt=media&token=c89c195f-4180-4ec3-89b2-5ac62ea38d10" alt="" />
             <h2 id="bookkeeper-header" className="project-header">Book Keeper</h2>
             <div id="bookkeeper-text" className="description">
@@ -271,12 +248,12 @@ class ProjectPage extends Component {
                 This is another one of my early fullstack CRUD projects. It is a app that allows users to enter basic information about a book. Upgrades to this app will include user authentication for personal book collections, connection to an API to search for books by keyword, and a mechanism for users to record notes on a given book.
               </text>
             </div>
-            <div id="todo-links" className="project-links">
+            <div id="bookkeeper-links" className="project-links">
               <div className="link" >
                 <a href="https://github.com/Malik-G/book-keeper-app" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
               </div>
               <div className="link">
-                <a href="https://thawing-sands-98647.herokuapp.com/" title="CardSwap Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
+                <a href="https://thawing-sands-98647.herokuapp.com/" title="Book Keeper Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
               </div>
             </div>
             <div id="bookkeeper-techs" className="project-techs">
@@ -285,21 +262,22 @@ class ProjectPage extends Component {
           </div>
         </div>
 
-
-        <div id="social-container">
+        <div id="social-container" ref={div => this.state.socialContainer = div}>
           <h1 id="social-header">My Social</h1>
           <div id="social-links">
             <div className="social-link">
-              <a id="github-link" href="https://github.com/Malik-G" rel="noopener noreferrer" target="_blank"><img src="images/github-logo-medium.png" />
-              </a>
-              <h3>GitHub</h3>
-            </div>
-            <div className="social-link">
-              <a id="linkedin-link" href="https://www.linkedin.com/in/malik-glass-9b7533104/" rel="noopener noreferrer" target="_blank"><img className="social-link" src="images/linkedin-logo3.png" />
+              <a href="https://www.linkedin.com/in/malik-glass-9b7533104/" rel="noopener noreferrer" target="_blank"><img id="linkedin-link" src="images/linkedin-logo4.png" />
               </a>
               <h3>LinkedIn</h3>
             </div>
-            <h4>EMAIL: malikglass11@gmail.com</h4>
+            <div className="social-link">
+              <a href="https://github.com/Malik-G" rel="noopener noreferrer" target="_blank"><img id="github-link" src="images/github-logo-medium.png" />
+              </a>
+              <h3>GitHub</h3>
+            </div>
+          </div>
+          <div>
+            <h3 id="email">EMAIL: malikglass11@gmail.com</h3>
           </div>
         </div>
 
@@ -308,67 +286,4 @@ class ProjectPage extends Component {
   }
 }
 
-const mapReduxStateToProps = (reduxState) => {
-  return { reduxState };
-}
-
-//put inside of an object to use withStyles object
-// const myPic = {
-//    borderRadius: 50,
-//    height: 150,
-//    width: 200,
-//    marginTop: 40,
-//    marginLeft: 'auto',
-//    marginRight: 'auto'
-// }
-
-
-export default connect(mapReduxStateToProps)(ProjectPage);
-//export default withRouter(connect(mapReduxStateToProps)(withStyles(styling)(ProjectPage)));
-
-{/* <div className="parallax-reciperiot"></div>
-
-
-  <div className="infoContainer">
-    <h2 className="colorOrange">Description</h2>
-  </div>
-  <div className="infoContainer">
-    <h2 className="colorSeaGreen">See Online</h2>
-    <a href=""><Button variant="contained" color="primary">CODE ON GITHUB</Button></a>
-    <a href=""><Button variant="contained" color="default">WEBSITE</Button></a>
-  </div>
-  <div className="infoContainer">
-    <h2 className="colorTomato">Technologies</h2>
-  </div>
-
-  <div className="parallax-rgb"></div>
-
-  <div className="infoContainer">
-    <h2 className="colorOrange">Description</h2>
-  </div>
-  <div className="infoContainer">
-    <h2 className="colorSeaGreen">See Online</h2>
-    <a href=""><Button variant="contained" color="primary">CODE ON GITHUB</Button></a>
-    <a href=""><Button variant="contained" color="default">WEBSITE</Button></a>
-  </div>
-  <div className="infoContainer">
-    <h2 className="colorTomato">Technologies</h2>
-  </div>
-
-  <div className="parallax-todo"></div>
-
-  <div className="infoContainer">
-    <h2 className="colorOrange">Description</h2>
-
-    <p>"".description}</p>
-  </div>
-  <div className="infoContainer">
-    <h2 className="colorSeaGreen">See Online</h2>
-    <a href=""><Button variant="contained" color="primary">CODE ON GITHUB</Button></a>
-    <a href=""><Button variant="contained" color="default">WEBSITE</Button></a>
-  </div>
-  <div className="infoContainer">
-    <h2 className="colorTomato">Technologies</h2>
-  </div>
-
-  <div className="parallax-book"></div> */}
+export default withRouter(MainPage);

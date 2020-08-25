@@ -77,51 +77,17 @@ max-height:700px;
 	position:absolute;
 	margin-left:8%;
 }
-.header {
-   font-size: 80px;
-   color: grey;
-}
-.header-content{
-	min-width:100%;
-	/* height:100vw; */
-	display: grid;
-	grid-template-columns: 3;
-	border: 1px solid red;
-	position: relative;
-	top:0px;
-	left:0px;
-	position: absolute;
-	/* background-attachment: unset; */
-}
-.infoContainer {
-   max-width: 400px;
-   color:cadetblue;
-   margin: auto;
-   padding: 5px;
-   background: rgb(15,20,20);
-   text-decoration: none;
-   /* float:left */
-}
-.infoContainer-outer{
-	/* margin-top:10%; */
-	/* top:30%; */
-	position:relative;
-}
+
 .left{
 	top:10px;
 	left: 100px;
 }
 .myPic {
   border-radius: 50%;
-  /* height: 200px;
-  width: 200px; */
   height: 7em;
   width: 8em;
   margin: 0;
-  /* justify-self: center; */
-	/* position: fixed; */
-	/* z-index:-1; */
-	/* background-attachment: fixed; */
+
 }
 .panelDetails {
    background-color: rgb(67, 70, 67);
@@ -129,7 +95,7 @@ max-height:700px;
 }
 .parallax-stpaul-main{
 	/* background-image: url("../images/stpaul_night.jpg"); */
-	background-image: url("../internal-images/stpaul_night.png");
+	background-image: url("./internal-images/stpaul_night.png");
 	height: 100vh;
 	width: 100vw; 
 	/* background-attachment: fixed; */
@@ -149,7 +115,7 @@ max-height:700px;
 	/* display: inline-block; */
 }
 .parallax-stpaul-trans{
-	background-image: url("../internal-images/stpaul_night8.png");
+	background-image: url("./internal-images/stpaul_night8.png");
 	height: 100vh;
 	width: 100vw;
 	/* background-attachment: fixed; */
@@ -164,7 +130,7 @@ max-height:700px;
 	/* display: inline-block; */
 }
 .parallax-reciperiot{
-	background: url("../internal-images/recipe-riot-home.png");
+	background: url("./internal-images/recipe-riot-home.png");
 	height: 100vh;
 	width: 100vw; 
 	background-attachment: fixed;
@@ -174,7 +140,7 @@ max-height:700px;
 	
 }
 .parallax-rgb{
-	background-image: url("../internal-images/rgb_game.png");
+	background-image: url("./internal-images/rgb_game.png");
 	height: 100vh;
 	width: 100vw;
 	background-attachment: fixed;
@@ -183,7 +149,7 @@ max-height:700px;
 	background-size: cover;
 }
 .parallax-todo{
-	background-image: url("../internal-images/todo_site.png");
+	background-image: url("./internal-images/todo_site.png");
 	height: 100vh;
 	width: 100vw; 
 	background-attachment: fixed;
@@ -192,7 +158,7 @@ max-height:700px;
 	background-size: cover;
 }
 .parallax-book{
-	background-image: url("../internal-images/bookcollection.png");
+	background-image: url("./internal-images/bookcollection.png");
 	height: 100vh;
 	width: 100vw; 
 	background-attachment: fixed;
@@ -219,36 +185,37 @@ max-height:700px;
   h1 {
     font-size: 5em;
   }
-  .myPic{
+  #my-pic{
     height: 30em;
     width: 35em;
     opacity: 0.7;
-    margin: -100px;
+    margin: -80px;
   }
 }
 @media screen and (max-width: 60em) {
   h1 {
     font-size: 4em;
   }
-  .myPic{
-    height: 10em;
-    width: 11em;
+  #my-pic{
+    height: 30em;
+    width: 35em;
   }
 }
 @media screen and (max-width: 40em) {
   h1 {
     font-size: 3em;
   }
-  .my-pic{
-    height: 9em;
-    width: 10em;
+  #my-pic{
+    height: 25em;
+    width: 30em;
+    margin-top: 0px;
   }
 }
 /* @media screen and (min-width: 570px) {
   h1 {
     font-size: 3em;
   }
-  .my-pic{
+  #my-pic{
     height: 9em;
     width: 10em;
   }
