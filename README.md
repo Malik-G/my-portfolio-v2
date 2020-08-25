@@ -1,1 +1,1 @@
-You can visit this website at [http://www.malikglass.com](malikglass.com)
+You can visit this website at [www.malikglass.com](http://www.malikglass.com)
