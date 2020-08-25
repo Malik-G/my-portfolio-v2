@@ -100,7 +100,7 @@ class MainPage extends Component {
       <section>
 
         <div className="parallax-stpaul-main">
-          <img id="my-pic" src="images/malikg.png" alt="Picture of Malik Glass" />
+          <img id="my-pic" src="images/malikg.png" alt="Malik Glass" />
           <h1 id="name-header">Malik Glass</h1>
         </div>
 
@@ -245,7 +245,7 @@ class MainPage extends Component {
             <h2 id="bookkeeper-header" className="project-header">Book Keeper</h2>
             <div id="bookkeeper-text" className="description">
               <text>
-                This is another one of my early fullstack CRUD projects. It is a app that allows users to enter basic information about a book. Upgrades to this app will include user authentication for personal book collections, connection to an API to search for books by keyword, and a mechanism for users to record notes on a given book.
+                This is another one of my early fullstack CRUD projects. It is an app that allows users to enter basic information about a book. Upgrades to this app will include user authentication for personal book collections, connection to an API to search for books by keyword, and a mechanism for users to record notes on a given book.
               </text>
             </div>
             <div id="bookkeeper-links" className="project-links">
