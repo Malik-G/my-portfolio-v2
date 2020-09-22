@@ -141,13 +141,13 @@ margin-right: 5px;
   margin-left: 15px;
   margin-right: 15px;
   border: 2px solid rgb(150, 150, 150);
-  border-radius: 18%;
+  border-radius: 10%;
   justify-self:start;
   text-align: center;
   float:left;
 }
 .link:hover{
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   border: 2px solid white;
 }
 
@@ -229,7 +229,6 @@ margin-right: 5px;
 }
 #social-links{
   width:80vw;
-  /* height: 25vh; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* grid-template-rows: auto;  */
@@ -249,6 +248,369 @@ margin-right: 5px;
   font-size:100%;
   /* width: 50%; */
 }
+
+/*=============================================================================*/
+
+/*OLD APP.CSS SCRIPT*/
+
+.thebox{
+max-width:1000px;
+max-height:700px;
+}
+.App {
+  /* text-align: center; */
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: black;
+}
+/* .App-intro {
+  font-size: large;
+} */
+/* .App-title {
+  font-size: 1.5em;
+} */
+
+
+.bio-text{
+	justify-content: center;
+	width: 40%;
+	height: auto;
+	overflow: visible;
+}
+/* .colorOrange{
+   color: orange;
+}
+.colorSeaGreen {
+   color: rgb(59, 168, 106)
+}
+.colorLightBlue {
+   color: lightblue  
+}
+.colorTomato {
+   color: tomato
+} */
+.container{
+	/* height: 100%; */
+}
+.float-left{
+	float:left;
+	border: 1px solid red;
+}
+.github-div{
+	width: 25%;
+	height:50%;
+}
+.github-logo{
+	/* margin-left:5%; */
+	height: 100px;
+	width: 100px;
+	position:absolute;
+	margin-left:8%;
+}
+
+.left{
+	top:10px;
+	left: 100px;
+}
+/* #my-pic {
+  border-radius: 50%;
+  height: 7em;
+  width: 8em;
+  margin: 0;
+} */
+.panelDetails {
+   background-color: rgb(67, 70, 67);
+   font-family: 'Abel', sans-serif;
+}
+.parallax-stpaul-main{
+	/* background-image: url("../images/stpaul_night.jpg"); */
+	background-image: url("./internal-images/stpaul_night.png");
+	height: 100vh;
+	width: 100vw; 
+	/* background-attachment: fixed; */
+  background-position: center;
+	/* background-position: -50px center; */
+  /* background-position-x: 1px; */
+	background-repeat: no-repeat;
+  background-size: cover;
+	/* background-size: 90vw 90vh; */
+	z-index:-1;
+	position: fixed;
+	top:0px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: max-content; */
+	/* left:0px; */
+	/* display: inline-block; */
+}
+.parallax-stpaul-trans{
+	background-image: url("./internal-images/stpaul_night8.png");
+	height: 100vh;
+	width: 100vw;
+	/* background-attachment: fixed; */
+  background-position: center;
+	/* background-position: center; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* top:0px;*/
+	/* left:0px; */
+	/* background-attachment: scroll; */
+	/* position: fixed; */
+	/* display: inline-block; */
+}
+.parallax-reciperiot{
+	background: url("./internal-images/recipe-riot-home.png");
+	height: 100vh;
+	width: 100vw; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.parallax-rgb{
+	background-image: url("./internal-images/rgb_game.png");
+	height: 100vh;
+	width: 100vw;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.parallax-todo{
+	background-image: url("./internal-images/todo_site.png");
+	height: 100vh;
+	width: 100vw; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.parallax-book{
+	background-image: url("./internal-images/bookcollection.png");
+	height: 100vh;
+	width: 100vw; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.projectName{
+   margin: auto auto;
+   font-size: 40px;
+   color:black
+}
+.project-section {
+	display: inline-block;
+	width: 100%;
+}
+.title{
+	position:absolute;
+	background-attachment: fixed;
+}
+
+@media (max-width: 150em) {
+  h1 {
+    font-size: 6em;
+  }
+  #name-header{
+    font-size: 6em;
+  }
+  #my-pic{
+    height: 28em;
+    width: 38em;
+    opacity: 0.9;
+    margin-top: -8%;
+    /* justify-self:center */
+  }
+  
+}
+/* @media (max-width: 150em) and (min-height: 670px) {
+  h1 {
+    font-size: 6em;
+  }
+  #my-pic{
+    height: 35em;
+    width: 40em;
+    opacity: 0.8;
+    margin: -40px;
+  }
+} */
+
+@media (max-width: 80em) {
+  h1 {
+    font-size: 4.6em;
+  }
+  #name-header, #bio-header, #portfolio-header, #social-header{
+    font-size: 4.6em;
+  }
+  #my-pic{
+    height: 26em;
+    width: 36em;
+    opacity: 0.9;
+    margin-top: -5%;
+  }
+}
+
+/* @media (max-width: 80em) and (min-height: 670px){
+  h1 {
+    font-size: 5.5em;
+  }
+  #name-header{
+    font-size: 5.5em;
+  }
+  #my-pic{
+    height: 30em;
+    width: 35em;
+    opacity: 0.7;
+    margin: -80px;
+  }
+} */
+
+@media (max-width: 60em) {
+  h1 {
+    font-size: 3.2em;
+  }
+  #name-header{
+    font-size: 3.2em;
+  }
+  #my-pic{
+    height: 24em;
+    width: 34em;
+    opacity: 0.9;
+    margin-top: 2%;
+  }
+
+  .project-container{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 20%; */
+  margin-bottom: 15%;
+  display: grid;
+  gap:1em;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-areas: 
+    "title"
+    "img"
+    "img"
+    "links"
+    "desc"
+    "techs";
+  }
+  .description{
+  font-family: 'abel';
+  font-size:18px;
+  color: cadetblue;
+  width:80vw;
+  height:25vh;
+  grid-area: desc;
+  justify-self: center;
+}
+
+.project-header{
+  font-family: 'abel';
+  grid-area: title;
+  color: goldenrod;
+  font-size: 4em;
+  margin:0;
+  justify-self: center;
+}
+.project-img{
+  width:600px;
+  height:300px;
+  grid-area: img;
+  justify-self: center;
+}
+}
+@media(max-width: 50em){
+  h1 {
+    font-size: 4em;
+  }
+  #name-header{
+    font-size: 3em;
+  }
+  #my-pic{
+    height: 24em;
+    width: 32em;
+    opacity: 0.9;
+    margin-top: 3%;
+  }
+
+  /* .project-container{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  margin-bottom: 15%;
+  display: grid;
+  gap:1em;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "title title title title"
+    "img img img img"
+    "img img img img"
+    "links links links links"
+    "desc desc desc desc"
+    "techs techs techs techs";
+  }
+  .description{
+  font-family: 'abel';
+  font-size:18px;
+  color: cadetblue;
+  width:80vw;
+  height:25vh;
+  grid-area: desc;
+  justify-self: center;
+}
+
+.project-header{
+  font-family: 'abel';
+  grid-area: title;
+  color: goldenrod;
+  font-size: 4em;
+  margin:0;
+  justify-self: center;
+}
+.project-img{
+  width:80%;
+  height:100%;
+  grid-area: img;
+  justify-self: center;
+} */
+}
+
+@media (max-width: 40em) {
+  h1 {
+    font-size: 3em;
+  }
+  #name-header{
+    font-size: 3em;
+  }
+  #my-pic{
+    height: 25em;
+    width: 30em;
+    margin-top: 0px;
+  }
+  .parallax-stpaul-main, .parallax-stpaul-trans{
+    display: none
+  }
+.project-img{
+  width:80%;
+  height:100%;
+  grid-area: img;
+  justify-self: center;
+}
+  
+
+}
+
 
 @keyframes text-pulse {
 	50% {transform: scale(0.9)}

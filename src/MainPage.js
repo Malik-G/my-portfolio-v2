@@ -37,7 +37,7 @@ class MainPage extends Component {
     ScrollTrigger.batch(".project-container", {
       // interval: 0.3, // time window (in seconds) for batching to occur. 
       onEnter: batch => gsap.fromTo(batch, { opacity: 0, x: 100 } ,{ opacity: 1, x: 0}),
-      onLeave: batch => gsap.set(batch, { opacity: 0, x: -100, overwrite: true }),
+      // onLeave: batch => gsap.set(batch, { opacity: 0, x: -100, overwrite: true }),
       onEnterBack: batch => gsap.to(batch, { opacity: 1, x: 0, overwrite: true }),
       onLeaveBack: batch => gsap.set(batch, { opacity: 0, x: 100, overwrite: true })
     });
@@ -62,13 +62,25 @@ class MainPage extends Component {
       },
     })
 
+    gsap.to('#my-pic', {
+      y: 300,
+      x: 500,
+      opacity: 0.2,
+      scrollTrigger:{
+        scrub:true,
+        end: "top -=150%",
+        markers:true
+      }
+    })
+
     gsap.from(["#social-header", "#social-links"], {
       opacity: 0,
       scrollTrigger: {
         trigger: "#social-container", //this.state.bioContainer,
-        start: "top +=20%",
+        start: "top +=50%",
         end: "top top",
         scrub: true,
+        markers:true
       },
     })
 
@@ -104,7 +116,7 @@ class MainPage extends Component {
           <h1 id="name-header">Malik Glass</h1>
         </div>
 
-        <div className="parallax-stpaul-trans"></div>
+        <div className="parallax-stpaul-trans"> </div>
 
         <div id="bio-container" ref={div => this.state.bioContainer = div}>
           <h1 id="bio-header">Bio</h1>
