@@ -278,18 +278,18 @@ class MainPage extends Component {
           <h1 id="social-header">My Social</h1>
           <div id="social-links">
             <div className="social-link">
-              <a href="https://www.linkedin.com/in/malik-glass-9b7533104/" rel="noopener noreferrer" target="_blank"><img id="linkedin-link" src="images/linkedin-logo4.png" />
+              <a href="https://www.linkedin.com/in/malik-glass-9b7533104/" title="Linkedin Link" rel="noopener noreferrer" target="_blank"><img id="linkedin-link" src="images/linkedin-logo4.png" />
               </a>
               <h3>LinkedIn</h3>
             </div>
             <div className="social-link">
-              <a href="https://github.com/Malik-G" rel="noopener noreferrer" target="_blank"><img id="github-link" src="images/github-logo-medium.png" />
+              <a href="https://github.com/Malik-G" title="GitHub Link" rel="noopener noreferrer" target="_blank"><img id="github-link" src="images/github-logo-medium.png" />
               </a>
               <h3>GitHub</h3>
             </div>
           </div>
-          <div>
-            <h3 id="email">EMAIL: malikglass11@gmail.com</h3>
+          <div id="email">
+            <h3>EMAIL: malikglass11@gmail.com</h3>
           </div>
         </div>
 
