@@ -129,7 +129,6 @@ class MainPage extends Component {
                 <p id="greeting">Dear visitor,</p>
                 <p>Welcome! My name is Malik.</p>
                 <p>I am a software developer from Saint Paul, Minnesota.</p>
-                <p>I won't force you to read my bio.</p>
                 <p> <span id="animated-word">Click this</span> message if you care to know more.</p>
               </div>
               <div id="flip-note-back">

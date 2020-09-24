@@ -101,6 +101,7 @@ margin-right: 5px;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  
   box-shadow: 18px 22px 22px -14px rgba(0,0,0,0.39);
   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
@@ -113,18 +114,21 @@ margin-right: 5px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   text-align: left;
-  overflow: auto;
+  /* overflow: auto; */
+  /* overflow-y: scroll; */
 }
 #flip-note-front {
   /*background-color: #bbb; */
   /* justify-content: left; */
   padding-left: 3%;
+  overflow-y: scroll;
 }
 #flip-note-back {
   /* background-color: #2980b9; */
   /* margin-left: -20%; */
   /* padding-left: -3%; */
   transform: rotateY(180deg);
+  overflow-y: auto;
 }
 #github-link{
   height:200px;
@@ -560,15 +564,20 @@ max-height:700px;
     font-size: 3em;
   }
   #name-header{
-    font-size: 5em;
+    font-size: 4em;
     margin-bottom: 0px;
     color:forestgreen;
   }
 
   #my-pic-sm{
-    height: 30em;
-    width: 34em;
+    /* height: 200px;
+    width: 200px; */
+    height: 20em;
+    width:100vw;
     margin-top: 0px;
+    margin: auto;
+    /* padding-left: 20%; */
+    /* padding-right: 40%; */
   }
   #flip-note {
   font-family: 'Alegreya Sans SC';
@@ -594,7 +603,8 @@ max-height:700px;
   .sm-screen-header{
     display:block;
     text-align: center;
-    justify-content: center;
+    /* justify-content: center; */
+    /* width: 100vw; */
     height: 100vh;
     background:white;
   }
