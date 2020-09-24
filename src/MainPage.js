@@ -118,6 +118,11 @@ class MainPage extends Component {
 
         <div className="parallax-stpaul-trans"> </div>
 
+        <div className="sm-screen-header">
+          <h1 id="name-header">Malik Glass</h1>
+          <img id="my-pic-sm" src="images/malikg2.png" alt="Malik Glass" />
+        </div>
+
         <div id="bio-container" ref={div => this.state.bioContainer = div}>
           <h1 id="bio-header">Bio</h1>
           <div id="flip-note" onClick={this.flip}>
