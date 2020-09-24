@@ -69,7 +69,6 @@ class MainPage extends Component {
       scrollTrigger:{
         scrub:true,
         end: "top -=150%",
-        markers:true
       }
     })
 
@@ -80,7 +79,6 @@ class MainPage extends Component {
         start: "top +=50%",
         end: "top top",
         scrub: true,
-        markers:true
       },
     })
 
