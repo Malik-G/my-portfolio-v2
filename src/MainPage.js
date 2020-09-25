@@ -191,7 +191,7 @@ class MainPage extends Component {
               <text>
                 This app is what I chose to create for my solo project at Prime Digital Academy.
                 It was made to eventually be an extension of an already existing e-commerce site called CardsAwaySports.
-                CardSwap is still in development, with messaging and a payment method being the major priorities in future releases.
+                CardSwap is still in development, with messaging, a payment system, and better responsive design being the major priorities in future releases.
                 To explore the app, login with <span className="highlight">USERNAME: malik</span> and <span className="highlight">PASSWORD: malikg1</span> or register a new account.
               </text>
             </div>
