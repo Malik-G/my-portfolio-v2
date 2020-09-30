@@ -440,6 +440,9 @@ max-height:700px;
     margin-top: -8%;
     /* justify-self:center */
   }
+  .sm-screen-header{
+    display:none;
+  }
   
 }
 /* @media (max-width: 150em) and (min-height: 670px) {
