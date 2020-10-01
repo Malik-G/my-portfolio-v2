@@ -1,21 +1,6 @@
-body {
-   /* background-color: rgb(67, 70, 67); */
-}
 a{
   text-decoration: none;
 }
-hr { 
-    opacity: 0.5;
-    border: 0; 
-    height: 2px; 
-    width:40%;
-    margin-bottom:5%;
-    margin-top:5%;
-    background-image: -moz-linear-gradient(left, tomato, goldenrod, forestgreen);
-    background-image: -webkit-linear-gradient(left, rgb(45, 45, 45), tomato, goldenrod, forestgreen, rgb(45, 45, 45));
-    background-color: tomato;
-  }
-
 #animated-word{
   animation: text-pulse ease-in-out 1.2s;
 	animation-iteration-count: infinite;
@@ -50,12 +35,6 @@ hr {
   width:75px;
   height:50px;
 }
-#reciperiot-github, #reciperiot-site,
-#todo-github, #todo-site{
-margin-top: 20px;
-margin-left: 5px;
-margin-right: 5px;
-}
 
 .colorOrange{
   color: orange;
@@ -87,12 +66,8 @@ margin-right: 5px;
   perspective: 1000px;
   margin: auto;
   font-weight: bold;
-  /* font-family: 'Amatic SC'; */
-  /* font-family: 'Covered By Your Grace'; */
   font-family: 'Permanent Marker', cursive;
-  /* font-family: 'Sue Ellen Francisco', cursive; */
-  /* font-family: 'Walter Turncoat', cursive; */
-  /* font-family: 'Squada One', cursive; */
+  
 }
 #flip-note-inner {
   position: relative;
@@ -134,9 +109,27 @@ margin-right: 5px;
   height:200px;
   width:200px;
 }
+.github-logo{
+	/* margin-left:5%; */
+	height: 100px;
+	width: 100px;
+	position:absolute;
+	margin-left:8%;
+}
 .highlight{
   color: goldenrod;
 }
+hr { 
+    opacity: 0.5;
+    border: 0; 
+    height: 2px; 
+    width:40%;
+    margin-bottom:5%;
+    margin-top:5%;
+    background-image: -moz-linear-gradient(left, tomato, goldenrod, forestgreen);
+    background-image: -webkit-linear-gradient(left, rgb(45, 45, 45), tomato, goldenrod, forestgreen, rgb(45, 45, 45));
+    background-color: tomato;
+  }
 .link{
   width:100px;
   height:50px;
@@ -173,28 +166,50 @@ margin-right: 5px;
   padding-left: 2%;
   /* margin: 0%; */
 }
+.parallax-stpaul-main{
+	background-image: url("./internal-images/stpaul_night.png");
+  background-position: center;
+  /* background-position-x: 1px; */
+	background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+	width: 100vw; 
+	z-index:-1;
+	position: fixed;
+  top:0px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  	/* background-attachment: fixed; */
+}
+.parallax-stpaul-trans{
+	background-image: url("./internal-images/stpaul_night8.png");
+	height: 100vh;
+	width: 100vw;
+  background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #portfolio-container{
   	/* background: rgb(47, 50, 53); */
   background: white;
+  width: 100vw;
   /* height: 102vh; */
   /* height: auto; */
-  width: 100vw;
-  /* margin-bottom:0; */
 }
 #portfolio-header, #social-header{
   color: white;
 }
-
 .project-container{
   width:90%;
   margin-left: auto;
   margin-right: auto;
   /* margin-top: 20%; */
-  margin-bottom: 10%;
+  margin-bottom: 12%;
   display: grid;
   gap:1em;
   grid-template-columns: auto;
-  grid-template-rows: 30% 30% 30% 25%;
+  grid-template-rows: 40% 40% 30% 25%;
   grid-template-areas: 
     "img img title title"
     "img img desc desc"
@@ -224,6 +239,12 @@ margin-right: 5px;
   font-family: 'abel';
   grid-area: techs;
   justify-self: center;
+}
+#reciperiot-github, #reciperiot-site,
+#todo-github, #todo-site{
+margin-top: 20px;
+margin-left: 5px;
+margin-right: 5px;
 }
 #social-container{
   background: rgb(45, 45, 45);
@@ -259,172 +280,7 @@ margin-right: 5px;
 
 /*=============================================================================*/
 
-/*OLD APP.CSS SCRIPT*/
-
-.thebox{
-max-width:1000px;
-max-height:700px;
-}
-.App {
-  /* text-align: center; */
-}
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: black;
-}
-/* .App-intro {
-  font-size: large;
-} */
-/* .App-title {
-  font-size: 1.5em;
-} */
-
-
-.bio-text{
-	justify-content: center;
-	width: 40%;
-	height: auto;
-	overflow: visible;
-}
-/* .colorOrange{
-   color: orange;
-}
-.colorSeaGreen {
-   color: rgb(59, 168, 106)
-}
-.colorLightBlue {
-   color: lightblue  
-}
-.colorTomato {
-   color: tomato
-} */
-.container{
-	/* height: 100%; */
-}
-.float-left{
-	float:left;
-	border: 1px solid red;
-}
-.github-div{
-	width: 25%;
-	height:50%;
-}
-.github-logo{
-	/* margin-left:5%; */
-	height: 100px;
-	width: 100px;
-	position:absolute;
-	margin-left:8%;
-}
-/* #email{
-  border: 2px solid rgb(115,165,217);
-  width: 30%;
-  height: 60%;
-  border-radius: 10%;
-} */
-.left{
-	top:10px;
-	left: 100px;
-}
-/* #my-pic {
-  border-radius: 50%;
-  height: 7em;
-  width: 8em;
-  margin: 0;
-} */
-.panelDetails {
-   background-color: rgb(67, 70, 67);
-   font-family: 'Abel', sans-serif;
-}
-.parallax-stpaul-main{
-	/* background-image: url("../images/stpaul_night.jpg"); */
-	background-image: url("./internal-images/stpaul_night.png");
-	height: 100vh;
-	width: 100vw; 
-	/* background-attachment: fixed; */
-  background-position: center;
-	/* background-position: -50px center; */
-  /* background-position-x: 1px; */
-	background-repeat: no-repeat;
-  background-size: cover;
-	/* background-size: 90vw 90vh; */
-	z-index:-1;
-	position: fixed;
-	top:0px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  /* grid-template-rows: max-content; */
-	/* left:0px; */
-	/* display: inline-block; */
-}
-.parallax-stpaul-trans{
-	background-image: url("./internal-images/stpaul_night8.png");
-	height: 100vh;
-	width: 100vw;
-	/* background-attachment: fixed; */
-  background-position: center;
-	/* background-position: center; */
-	background-repeat: no-repeat;
-	background-size: cover;
-	/* top:0px;*/
-	/* left:0px; */
-	/* background-attachment: scroll; */
-	/* position: fixed; */
-	/* display: inline-block; */
-}
-.parallax-reciperiot{
-	background: url("./internal-images/recipe-riot-home.png");
-	height: 100vh;
-	width: 100vw; 
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	
-}
-.parallax-rgb{
-	background-image: url("./internal-images/rgb_game.png");
-	height: 100vh;
-	width: 100vw;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.parallax-todo{
-	background-image: url("./internal-images/todo_site.png");
-	height: 100vh;
-	width: 100vw; 
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.parallax-book{
-	background-image: url("./internal-images/bookcollection.png");
-	height: 100vh;
-	width: 100vw; 
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.projectName{
-   margin: auto auto;
-   font-size: 40px;
-   color:black
-}
-.project-section {
-	display: inline-block;
-	width: 100%;
-}
-.title{
-	position:absolute;
-	background-attachment: fixed;
-}
+/*MEDIA QUERIES*/
 
 @media (max-width: 150em) {
   h1 {
@@ -432,6 +288,9 @@ max-height:700px;
   }
   #name-header{
     font-size: 6em;
+  }
+  #bio-header, #portfolio-header, #social-header{
+    font-size: 5em;
   }
   #my-pic{
     height: 28em;
@@ -443,25 +302,10 @@ max-height:700px;
   .sm-screen-header{
     display:none;
   }
-  
 }
-/* @media (max-width: 150em) and (min-height: 670px) {
-  h1 {
-    font-size: 6em;
-  }
-  #my-pic{
-    height: 35em;
-    width: 40em;
-    opacity: 0.8;
-    margin: -40px;
-  }
-} */
 
 @media (max-width: 80em) {
   h1 {
-    font-size: 4.6em;
-  }
-  #name-header, #bio-header, #portfolio-header, #social-header{
     font-size: 4.6em;
   }
   #my-pic{
@@ -469,72 +313,51 @@ max-height:700px;
     width: 36em;
     opacity: 0.9;
     margin-top: -2%;
+  }
+  #name-header, #bio-header, #portfolio-header, #social-header{
+    font-size: 4.6em;
+  }
+  
+  .project-container{
+    margin-bottom: 10%;
+    grid-template-rows: 30% 30% 30% 25%;
   }
   .sm-screen-header{
     display:none;
   }
 }
 
-/* @media (max-width: 80em) and (min-height: 670px){
-  h1 {
-    font-size: 5.5em;
-  }
-  #name-header{
-    font-size: 5.5em;
-  }
-  #my-pic{
-    height: 30em;
-    width: 35em;
-    opacity: 0.7;
-    margin: -80px;
-  }
-} */
-
 @media (max-width: 60em) {
+  .description{
+    font-family: 'abel';
+    font-size:18px;
+    color: cadetblue;
+    width:80vw;
+    grid-area: desc;
+    justify-self: center;
+  }
   h1 {
     font-size: 3.2em;
   }
-  
-  #name-header{
-    font-size: 3.2em;
-  }
-  #my-pic{
-    /* height: 24em;
-    width: 34em;
-    opacity: 0.9;
-    margin-top: 2%; */
+  #my-pic {
     height: 26em;
     width: 36em;
     opacity: 0.9;
     margin-top: -2%;
   }
+  #name-header{
+    font-size: 3.2em;
+  }
   .project-container{
     width:90%;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-top: 20%; */
     margin-bottom: 8%;
-    display: grid;
-    gap:1em;
-    grid-template-columns: auto;
     grid-template-rows: auto auto auto auto auto;
-    /* grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr; */
     grid-template-areas: 
       "title"
       "img"
       "links"
       "desc"
       "techs";
-  }
-  .description{
-    font-family: 'abel';
-    font-size:18px;
-    color: cadetblue;
-    width:80vw;
-    /* height:25vh; */
-    grid-area: desc;
-    justify-self: center;
-    /* margin-bottom: -60; */
   }
   .project-header{
     font-family: 'abel';
@@ -563,37 +386,32 @@ max-height:700px;
 }
 
 @media (max-width: 40em) {
+  #flip-note {
+    font-family: 'Alegreya Sans SC';
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    background-color: transparent;
+    width: 80%;
+    height: 60%;
+    perspective: 1000px;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+  }
   h1 {
     font-size: 3em;
+  }
+  #my-pic-sm{
+    height: 20em;
+    width:100vw;
+    margin-top: 0px;
+    margin: auto;
   }
   #name-header{
     font-size: 4em;
     margin-bottom: 0px;
     color:forestgreen;
   }
-
-  #my-pic-sm{
-    /* height: 200px;
-    width: 200px; */
-    height: 20em;
-    width:100vw;
-    margin-top: 0px;
-    margin: auto;
-    /* padding-left: 20%; */
-    /* padding-right: 40%; */
-  }
-  #flip-note {
-  font-family: 'Alegreya Sans SC';
-  font-size: 1.2em;
-  letter-spacing: 1px;
-  background-color: transparent;
-  width: 80%;
-  height: 60%;
-  perspective: 1000px;
-  margin: auto;
-  font-weight: bold;
-  font-family: 'Permanent Marker', cursive;
-}
   .parallax-stpaul-main, .parallax-stpaul-trans{
     display: none
   }
@@ -606,15 +424,25 @@ max-height:700px;
   .sm-screen-header{
     display:block;
     text-align: center;
-    /* justify-content: center; */
-    /* width: 100vw; */
     height: 100vh;
     background:white;
   }
 }
 
+/*=============================================================================*/
+
+/*KEYFRAMES*/
 
 @keyframes text-pulse {
 	50% {transform: scale(0.9)}
 }
 
+/*=============================================================================*/
+
+/*EXTRA FONTS*/
+
+/* font-family: 'Amatic SC'; */
+  /* font-family: 'Covered By Your Grace'; */
+  /* font-family: 'Sue Ellen Francisco', cursive; */
+  /* font-family: 'Walter Turncoat', cursive; */
+  /* font-family: 'Squada One', cursive; */
