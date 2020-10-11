@@ -17,32 +17,15 @@ class MainPage extends Component {
   };
 
   componentDidMount() {
-    // const portfolioTimeline = gsap.timeline()
-    // portfolioTimeline.from("#portfolio-header", { autoalpha: 0.1 })
-    //   .from("#cardswap", { xPercent: 105, autoalpha: 0, ease: "circ.out" }, ">-0.4") //">-0.7"
-    //   .from("#reciperiot", { xPercent: -105, autoalpha: 0, ease: "circ.out" }, ">0.3")
-    //   .from("#todo", { xPercent: 105, autoalpha: 0, ease: "circ.out" }, ">0.2")
-    //   .from("#bookkeeper", { xPercent: -105, autoalpha: 0, ease: "circ.out" })
-
-    // ScrollTrigger.create({
-    //   animation: portfolioTimeline,
-    //   trigger: "#portfolio-container",//this.state.portfolioContainer,
-    //   start: "top +=60%",
-    //   end: "top -=225%",
-    //   // end: "bottom +=10%",
-    //   scrub: true,
-    //   markers: true
-    // })
-
     ScrollTrigger.batch(".project-container", {
-      // interval: 0.3, // time window (in seconds) for batching to occur. 
-      onEnter: batch => gsap.fromTo(batch, { opacity: 0, x: 100 } ,{ opacity: 1, x: 0}),
+      // interval: 0.8, // time window (in seconds) for batching to occur. 
+      onEnter: batch => gsap.fromTo(batch, { opacity: 0, x: 100 }, { opacity: 1, x: 0}),
       // onLeave: batch => gsap.set(batch, { opacity: 0, x: -100, overwrite: true }),
       onEnterBack: batch => gsap.to(batch, { opacity: 1, x: 0, overwrite: true }),
       onLeaveBack: batch => gsap.set(batch, { opacity: 0, x: 100, overwrite: true })
     });
 
-    gsap.to(this.state.bioContainer, {
+    gsap.fromTo(this.state.bioContainer, {background: 'white'}, {
       background: 'rgb(45, 45, 45)',
       scrollTrigger: {
         trigger: "#bio-container", //this.state.bioContainer,
@@ -52,7 +35,7 @@ class MainPage extends Component {
       },
     })
 
-    gsap.to(this.state.portfolioContainer, {
+    gsap.fromTo(this.state.portfolioContainer, { background: 'white' }, {
       background: 'rgb(45, 45, 45)',
       scrollTrigger: {
         trigger: "#bio-container", //this.state.bioContainer,
@@ -75,22 +58,12 @@ class MainPage extends Component {
     gsap.from(["#social-header", "#social-links"], {
       opacity: 0,
       scrollTrigger: {
-        trigger: "#social-container", //this.state.bioContainer,
+        trigger: "#social-container", //this.state.socialContainer,
         start: "top +=50%",
         end: "top top",
         scrub: true,
       },
     })
-
-    // gsap.from("#social-links", {
-    //   opacity: 0,
-    //   scrollTrigger: {
-    //     trigger: "#social-container", //this.state.bioContainer,
-    //     start: "top +=20%",
-    //     end: "top top",
-    //     scrub: true,
-    //   },
-    // })
   }
 
   flip = (event) => {

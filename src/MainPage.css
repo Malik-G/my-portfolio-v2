@@ -2,10 +2,13 @@ a{
   text-decoration: none;
 }
 #animated-word{
+  /* -webkit-animation: text-pulse ease-in-out 1.2s;
   animation: text-pulse ease-in-out 1.2s;
-	animation-iteration-count: infinite;
-  color: rgb(72, 107, 202);
+  -webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite; */
+  color: tomato;
   display: inline-block;
+  font-size: 20px
 }
 .big-font, #bio-header, #portfolio-header, #social-header{
   margin: auto;
@@ -63,6 +66,7 @@ a{
   background-color: transparent;
   width: 20em;
   height: 60%;
+  -webkit-perspective: 1000px;
   perspective: 1000px;
   margin: auto;
   font-weight: bold;
@@ -74,7 +78,9 @@ a{
   width: 100%;
   height: 100%;
   text-align: center;
+  -webkit-transition: transform 0.6s;
   transition: transform 0.6s;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   
   box-shadow: 18px 22px 22px -14px rgba(0,0,0,0.39);
@@ -84,11 +90,12 @@ a{
   background:rgb(250, 250, 250);
   color: black;
   position: absolute;
-  width: 100%;
+  width: 100%;/* font-family: 'Amatic SC'; */
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   text-align: left;
+
   /* overflow: auto; */
   /* overflow-y: scroll; */
 }
@@ -102,6 +109,7 @@ a{
   /* background-color: #2980b9; */
   /* margin-left: -20%; */
   /* padding-left: -3%; */
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   overflow-y: auto;
 }
@@ -225,7 +233,7 @@ hr {
 }
 .project-img{
   width:70%;
-  height:100%;
+  height: 200px;
   grid-area: img;
   justify-self: center;
 }
@@ -282,6 +290,13 @@ margin-right: 5px;
 
 /*MEDIA QUERIES*/
 
+@media (min-width: 1300px){
+  .project-img{
+    width:60%;
+    height: 220px;
+  }
+}
+
 @media (max-width: 150em) {
   h1 {
     font-size: 6em;
@@ -301,6 +316,14 @@ margin-right: 5px;
   }
   .sm-screen-header{
     display:none;
+  }
+}
+
+@media (max-width: 150em) and (min-height: 765px) {
+  #my-pic{
+    height: 30em;
+    width: 40em;
+    margin-top: 6%;
   }
 }
 
@@ -327,6 +350,14 @@ margin-right: 5px;
   }
 }
 
+@media (max-width: 80em) and (min-height: 765px) {
+  #my-pic{
+    height: 30em;
+    width: 40em;
+    margin-top: 6%;
+  }
+}
+
 @media (max-width: 60em) {
   .description{
     font-family: 'abel';
@@ -343,7 +374,6 @@ margin-right: 5px;
     height: 26em;
     width: 36em;
     opacity: 0.9;
-    margin-top: -2%;
   }
   #name-header{
     font-size: 3.2em;
@@ -385,6 +415,14 @@ margin-right: 5px;
   }
 }
 
+@media (max-width: 60em) and (min-height: 765px) {
+  #my-pic{
+    height: 30em;
+    width: 40em;
+    margin-top: 6%;
+  }
+}
+
 @media (max-width: 40em) {
   #flip-note {
     font-family: 'Alegreya Sans SC';
@@ -403,7 +441,7 @@ margin-right: 5px;
   }
   #my-pic-sm{
     height: 20em;
-    width:100vw;
+    width:80vw;
     margin-top: 0px;
     margin: auto;
   }
@@ -429,12 +467,13 @@ margin-right: 5px;
   }
 }
 
+
 /*=============================================================================*/
 
 /*KEYFRAMES*/
 
 @keyframes text-pulse {
-	50% {transform: scale(0.9)}
+	50% {-webkit-transform: scale(0.9); transform: scale(0.9);}
 }
 
 /*=============================================================================*/
@@ -442,7 +481,10 @@ margin-right: 5px;
 /*EXTRA FONTS*/
 
 /* font-family: 'Amatic SC'; */
-  /* font-family: 'Covered By Your Grace'; */
-  /* font-family: 'Sue Ellen Francisco', cursive; */
-  /* font-family: 'Walter Turncoat', cursive; */
-  /* font-family: 'Squada One', cursive; */
+/* font-family: 'Covered By Your Grace'; */
+/* font-family: 'Dokdo', cursive; */
+/* font-family: 'Nanum Brush Script', cursive; */
+/* font-family: 'Permanent Marker', cursive; */
+/* font-family: 'Sue Ellen Francisco', cursive; */
+/* font-family: 'Walter Turncoat', cursive; */
+/* font-family: 'Squada One', cursive; */
