@@ -2,10 +2,10 @@ a{
   text-decoration: none;
 }
 #animated-word{
-  /* -webkit-animation: text-pulse ease-in-out 1.2s;
+  -webkit-animation: text-pulse ease-in-out 1.2s;
   animation: text-pulse ease-in-out 1.2s;
   -webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite; */
+	animation-iteration-count: infinite;
   color: tomato;
   display: inline-block;
   font-size: 20px
@@ -27,7 +27,7 @@ a{
 #bio-header{
   color:rgb(72, 107, 202);
 }
-#bookkeeper{
+#cardswap{
   margin-bottom:0;
 }
 #cardswap-github{
@@ -203,7 +203,6 @@ hr {
   background: white;
   width: 100vw;
   /* height: 102vh; */
-  /* height: auto; */
 }
 #portfolio-header, #social-header{
   color: white;
@@ -216,7 +215,7 @@ hr {
   margin-bottom: 12%;
   display: grid;
   gap:1em;
-  grid-template-columns: auto;
+  grid-template-columns: auto ;
   grid-template-rows: 40% 40% 30% 25%;
   grid-template-areas: 
     "img img title title"

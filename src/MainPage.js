@@ -19,13 +19,13 @@ class MainPage extends Component {
   componentDidMount() {
     ScrollTrigger.batch(".project-container", {
       // interval: 0.8, // time window (in seconds) for batching to occur. 
-      onEnter: batch => gsap.fromTo(batch, { opacity: 0, x: 100 }, { opacity: 1, x: 0}),
+      onEnter: batch => gsap.fromTo(batch, { opacity: 0, x: 100 }, { opacity: 1, x: 0 }),
       // onLeave: batch => gsap.set(batch, { opacity: 0, x: -100, overwrite: true }),
       onEnterBack: batch => gsap.to(batch, { opacity: 1, x: 0, overwrite: true }),
       onLeaveBack: batch => gsap.set(batch, { opacity: 0, x: 100, overwrite: true })
     });
 
-    gsap.fromTo(this.state.bioContainer, {background: 'white'}, {
+    gsap.fromTo(this.state.bioContainer, { background: 'white' }, {
       background: 'rgb(45, 45, 45)',
       scrollTrigger: {
         trigger: "#bio-container", //this.state.bioContainer,
@@ -49,8 +49,8 @@ class MainPage extends Component {
       y: 300,
       x: 500,
       opacity: 0.2,
-      scrollTrigger:{
-        scrub:true,
+      scrollTrigger: {
+        scrub: true,
         end: "top -=150%",
       }
     })
@@ -157,6 +157,52 @@ class MainPage extends Component {
 
         <div id="portfolio-container" ref={div => this.state.portfolioContainer = div}>
           <h1 id="portfolio-header">Portfolio</h1>
+          <div id="zeus-box" className="project-container">
+            <img id="zeus-box-img" className="project-img" src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/Screen%20Shot%202020-10-29%20at%2012.51.33%20PM.png?alt=media&token=9473c6e5-ee3d-438c-b172-ff77f5632f1e" alt="" />
+            <h2 id="zeus-box-header" className="project-header">Zeus Box</h2>
+            <div id="zeus-box-text" className="description">
+              <text>
+                Started by close friends of mine, Zeus Box is company in the making whose goal is to curate and sell
+                personalized gift boxes for dogs. This link will take you to the proof of concept website that I am currently working on. <span className="highlight">Feel free to
+                create an account</span> and use the test credit card to simulate a purchase.
+              </text>
+            </div>
+            <div id="zeus-box-links" className="project-links">
+              <div className="link" >
+                <a href="https://github.com/Malik-G/zeus-box" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
+              </div>
+              <div className="link">
+                <a href="https://clone-590dd.web.app/" title="Zeus Box Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
+              </div>
+            </div>
+            <div id="zeus-box-techs" className="project-techs">
+              <p>JavaScript | React | Node | Express | Firebase DB & Hosting | Material-UI</p>
+            </div>
+          </div>
+          <hr />
+          <div id="reciperiot" className="project-container">
+            <img id="reciperiot-img" className="project-img" src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/Screen%20Shot%202020-02-14%20at%205.44.20%20PM.png?alt=media&token=3192ddef-ce9c-4ac7-a6e4-5a72fc1cc5d2" alt="" />
+            <h2 id="reciperiot-header" className="project-header">Recipe Riot</h2>
+            <div id="reciperiot-text" className="description">
+              <text>
+                This is a proof of concept recipe app that pulls data from multiple APIs based on a keyword search.
+                At the moment, the searches return a limited amount of results due to the costs of making requests to these different APIs.
+                There are still a few features that I would like to implement - mainly pagination and some styling choices. When you visit the site, <span className="highlight">feel free to interact</span> with any of the Sources.
+              </text>
+            </div>
+            <div id="reciperiot-links" className="project-links">
+              <div className="link" >
+                <a href="https://github.com/Malik-G/recipe-site/" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
+              </div>
+              <div className="link">
+                <a href="https://powerful-sea-84064.herokuapp.com/" title="Recipe Riot Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
+              </div>
+            </div>
+            <div id="reciperiot-techs" className="project-techs">
+              <p>JavaScript | React | Node | Express | Redux | Material-UI | Heroku</p>
+            </div>
+          </div>
+          <hr />
           <div id="cardswap" className="project-container">
             <img id="cardswap-img" className="project-img" src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/Screen%20Shot%202018-12-07%20at%206.04.45%20PM.png?alt=media&token=86a85405-b336-4e63-a9fa-b2f1256d1654" alt="" />
             <h2 id="cardswap-header" className="project-header">CardSwap</h2>
@@ -177,74 +223,7 @@ class MainPage extends Component {
               </div>
             </div>
             <div id="cardswap-techs" className="project-techs">
-              <p>JavaScript | Node | Express | React | Redux | Material-UI | PostgreSQL | Firebase | Heroku</p>
-            </div>
-          </div>
-          <hr />
-          <div id="reciperiot" className="project-container">
-            <img id="reciperiot-img" className="project-img" src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/Screen%20Shot%202020-02-14%20at%205.44.20%20PM.png?alt=media&token=3192ddef-ce9c-4ac7-a6e4-5a72fc1cc5d2" alt="" />
-            <h2 id="reciperiot-header" className="project-header">Recipe Riot</h2>
-            <div id="reciperiot-text" className="description">
-              <text>
-                This is a proof of concept recipe app that pulls data from multiple APIs based on a keyword search.
-                At the moment, the searches return a limited amount of results due to the costs of making requests to these different APIs.
-                There are still a few features that I would like to implement - mainly pagination and some styling choices. When you visit the site, FEEL FREE TO INTERACT with any of the Sources.
-              </text>
-            </div>
-            <div id="reciperiot-links" className="project-links">
-              <div className="link" >
-                <a href="https://github.com/Malik-G/recipe-site/" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
-              </div>
-              <div className="link">
-                <a href="https://powerful-sea-84064.herokuapp.com/" title="Recipe Riot Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
-              </div>
-            </div>
-            <div id="reciperiot-techs" className="project-techs">
-              <p>JavaScript | Node | Express | React | Redux | Material-UI | Heroku</p>
-            </div>
-          </div>
-          <hr />
-          <div id="todo" className="project-container">
-            <img id="todo-img" className="project-img" src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/to_do_list.png?alt=media&token=8452492b-ee09-42af-a980-c2018539edb1" alt="" />
-            <h2 id="todo-header" className="project-header">To-Do App</h2>
-            <div id="todo-text" className="description">
-              <text>
-                Here's a classic! This is my first fullstack to-do list. I know some say you shouldn't have a to-do app
-                on your portfolio, but hey. User authentication and some UI upgrades will be the next features
-                added to this project. Give it a try.
-              </text>
-            </div>
-            <div id="todo-links" className="project-links">
-              <div className="link" >
-                <a href="https://github.com/Malik-G/to-do-list" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
-              </div>
-              <div className="link">
-                <a href="https://obscure-ridge-59300.herokuapp.com/" title="To-Do App Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
-              </div>
-            </div>
-            <div id="todo-techs" className="project-techs">
-              <p>JavaScript | Node | Express | jQuery | Bootstrap | PostgreSQL | Heroku</p>
-            </div>
-          </div>
-          <hr />
-          <div id="bookkeeper" className="project-container">
-            <img id="bookkeeper-img" className="project-img" src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/book_list.png?alt=media&token=c89c195f-4180-4ec3-89b2-5ac62ea38d10" alt="" />
-            <h2 id="bookkeeper-header" className="project-header">Book Keeper</h2>
-            <div id="bookkeeper-text" className="description">
-              <text>
-                This is another one of my early fullstack CRUD projects. It is an app that allows users to enter basic information about a book. Upgrades to this app will include user authentication for personal book collections, connection to an API to search for books by keyword, and a mechanism for users to record notes on a given book.
-              </text>
-            </div>
-            <div id="bookkeeper-links" className="project-links">
-              <div className="link" >
-                <a href="https://github.com/Malik-G/book-keeper-app" title="Github Link" rel="noopener noreferrer" target="_blank"><img id="cardswap-github" src="images/github-logo-gold.png" /></a>
-              </div>
-              <div className="link">
-                <a href="https://thawing-sands-98647.herokuapp.com/" title="Book Keeper Website" rel="noopener noreferrer" target="_blank"><img id="cardswap-site" src="images/web-logo.png" /></a>
-              </div>
-            </div>
-            <div id="bookkeeper-techs" className="project-techs">
-              <p>JavaScript | Node | Express | jQuery | Bootstrap | PostgreSQL | Heroku</p>
+              <p>JavaScript | React | Node | Express | Redux | Material-UI | PostgreSQL | Firebase | Heroku</p>
             </div>
           </div>
         </div>
