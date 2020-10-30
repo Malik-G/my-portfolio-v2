@@ -80,7 +80,7 @@ class MainPage extends Component {
 
   render() {
     return (
-      <section>
+      <section className="main-section">
 
         <div className="parallax-stpaul-main">
           <img id="my-pic" src="images/malikg.png" alt="Malik Glass" />
@@ -88,6 +88,14 @@ class MainPage extends Component {
         </div>
 
         <div className="parallax-stpaul-trans"> </div>
+
+        <div className="video-container">
+          <video className="video-banner" loop autoPlay muted>
+            <source src="https://firebasestorage.googleapis.com/v0/b/photo-storage-96fec.appspot.com/o/night_video2.mp4?alt=media&token=b0e8e617-f4bc-4775-abef-ebfc75bb8eaa"
+              className="login-video-source"
+              type="video/mp4" />
+          </video>
+        </div>
 
         <div className="sm-screen-header">
           <h1 id="name-header">Malik Glass</h1>
