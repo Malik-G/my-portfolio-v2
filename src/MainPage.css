@@ -350,6 +350,9 @@ hr {
   .sm-screen-header {
     display: none;
   }
+  .video-container {
+    display: none;
+  }
 }
 
 @media (max-width: 150em) and (min-height: 765px) {
@@ -357,6 +360,12 @@ hr {
     height: 30em;
     width: 40em;
     margin-top: 6%;
+  }
+  .sm-screen-header {
+    display: none;
+  }
+  .video-container {
+    display: none;
   }
 }
 
@@ -380,7 +389,7 @@ hr {
   .sm-screen-header {
     display: none;
   }
-  .video-banner {
+  .video-container {
     display: none;
   }
 }
@@ -390,6 +399,12 @@ hr {
     height: 30em;
     width: 40em;
     margin-top: 6%;
+  }
+  .sm-screen-header {
+    display: none;
+  }
+  .video-container {
+    display: none;
   }
 }
 
@@ -443,6 +458,9 @@ hr {
   .sm-screen-header {
     display: none;
   }
+  .video-container {
+    display: none;
+  }
 }
 
 @media (max-width: 60em) and (min-height: 765px) {
@@ -450,6 +468,12 @@ hr {
     height: 30em;
     width: 40em;
     margin-top: 6%;
+  }
+  .sm-screen-header {
+    display: none;
+  }
+  .video-container {
+    display: none;
   }
 }
 
@@ -469,9 +493,7 @@ hr {
   h1 {
     font-size: 3em;
   }
-  .main-section{
-
-  }
+  .main-section {}
   #my-pic-sm {
     height: 10em;
     width: 52vw;
@@ -483,7 +505,7 @@ hr {
     font-size: 4em;
     margin-bottom: 0px;
     color: forestgreen;
-    display:none;
+    display: none;
   }
   .parallax-stpaul-main, .parallax-stpaul-trans {
     display: none
